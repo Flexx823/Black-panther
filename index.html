@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savory Haven Restaurant</title>
+
+    <style>
+        /* Basic page styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f5ee;
+            color: #222;
+        }
+
+        /* Navigation bar */
+        header {
+            background-color: #183629;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            color: #e2b45c;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #e2b45c;
+        }
+
+        /* Welcome section */
+        .hero {
+            height: 450px;
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.55),
+                rgba(0, 0, 0, 0.55)
+            ), url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-top: 70px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #e2b45c;
+            color: #183629;
+            padding: 12px 24px;
+            margin-top: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: white;
+        }
+
+        /* About section */
+        section {
+            padding: 50px 8%;
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 650px;
+            margin: 15px auto;
+            line-height: 1.8;
+        }
+
+        h2 {
+            color: #183629;
+        }
+
+        /* Food menu */
+        .menu {
+            background-color: #eee9dc;
+            text-align: center;
+        }
+
+        .food-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .food-card {
+            background-color: white;
+            width: 280px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px #00000015;
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .food-card h3 {
+            color: #183629;
+        }
+
+        .food-card p {
+            padding: 0 15px;
+            color: #666;
+        }
+
+        .price {
+            color: #9b6c24;
+            font-weight: bold;
+            font-size: 18px;
+            padding-bottom: 20px;
+        }
+
+        /* Reservation section */
+        .reservation {
+            text-align: center;
+        }
+
+        form {
+            max-width: 450px;
+            margin: auto;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        form button {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #183629;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #e2b45c;
+        }
+
+        /* Mobile phone styling */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 5px;
+                display: inline-block;
+            }
+
+            .hero {
+                height: 400px;
+                padding-top: 40px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+                margin-top: 60px;
+            }
+
+            section {
+                padding: 40px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <h2>Savory Haven</h2>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#reservation">Book a Table</a>
+        </nav>
+    </header>
+
+    <!-- Welcome section -->
+    <div class="hero" id="home">
+        <h1>Good Food, Great Memories</h1>
+        <p>Enjoy delicious meals made with fresh ingredients.</p>
+        <a href="#menu" class="button">View Our Menu</a>
+    </div>
+
+    <!-- About section -->
+    <section class="about" id="about">
+        <h2>Welcome to Savory Haven</h2>
+
+        <p>
+            Savory Haven is a fictional restaurant created for food lovers.
+            We serve delicious meals in a comfortable environment.
+            Our goal is to make every visit special through great food
+            and excellent customer service.
+        </p>
+    </section>
+
+    <!-- Food menu -->
+    <section class="menu" id="menu">
+        <h2>Our Popular Meals</h2>
+        <p>Discover some of our customer favourites.</p>
+
+        <div class="food-container">
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80"
+                     alt="Fresh pizza">
+
+                <h3>Special Pizza</h3>
+                <p>Freshly baked pizza with cheese and toppings.</p>
+                <div class="price">₦15,000</div>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=600&q=80"
+                     alt="Pasta with herbs">
+
+                <h3>Creamy Pasta</h3>
+                <p>Delicious pasta prepared with a creamy sauce.</p>
+                <div class="price">₦12,000</div>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80"
+                     alt="Grilled meat">
+
+                <h3>Grilled Special</h3>
+                <p>Well-seasoned grilled meat with special sauce.</p>
+                <div class="price">₦18,500</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Reservation form -->
+    <section class="reservation" id="reservation">
+        <h2>Book a Table</h2>
+        <p>Fill in your details to request a reservation.</p>
+
+        <form id="bookingForm">
+            <input type="text" id="name"
+                   placeholder="Your full name" required>
+
+            <input type="email" id="email"
+                   placeholder="Your email address" required>
+
+            <input type="date" id="date" required>
+
+            <select id="guests" required>
+                <option value="">Number of guests</option>
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5 or more Guests</option>
+            </select>
+
+            <textarea id="message"
+                      placeholder="Special requests (optional)"
+                      rows="3"></textarea>
+
+            <button type="submit" class="button">
+                Request Reservation
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Savory Haven Restaurant</p>
+        <p>Lagos, Nigeria | hello@savoryhaven.example</p>
+        <p>Created as a website development portfolio project.</p>
+    </footer>
+
+    <script>
+        // Display the current year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Prevent selecting a date in the past
+        const dateInput = document.getElementById("date");
+
+        const today = new Date();
+        const localDate = new Date(
+            today.getTime() - today.getTimezoneOffset() * 60000
+        ).toISOString().split("T")[0];
+
+        dateInput.min = localDate;
+
+        // Handle the reservation form
+        document.getElementById("bookingForm").addEventListener(
+            "submit", function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const date = dateInput.value;
+                const guests = document.getElementById("guests").value;
+
+                alert(
+                    "Thank you, " + name + "!\n" +
+                    "Your reservation request has been received for " +
+                    date + ".\nGuests: " + guests +
+                    "\n\nThis is a demo. No booking has been saved."
+                );
+
+                this.reset();
+                dateInput.min = localDate;
+            }
+        );
+    </script>
+
+</body>
+</html>
